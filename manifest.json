@@ -31,6 +31,10 @@
             "type": "OBJECT"
           }],
           "js": "webhook.js"
+        },
+        "access": {
+          "requireApiKey": true,
+          "webhook": true
         }
       }, {
         "id": "get_members_of_team",
