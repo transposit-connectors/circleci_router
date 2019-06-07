@@ -71,7 +71,8 @@
             "executionLimits": {
             }
           }
-        }
+        },
+        "title": "Slack"
       }, {
         "ref": "slack.raw",
         "overrides": {
