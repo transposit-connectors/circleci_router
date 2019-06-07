@@ -49,6 +49,7 @@
       }],
       "dataConnections": [{
         "ref": "github.raw",
+        "requireConsumerSignin": true,
         "overrides": {
           "swagger": {
             "oauthConfig": {
