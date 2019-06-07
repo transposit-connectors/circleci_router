@@ -18,6 +18,18 @@
           "requireUser": true
         }
       }],
+      "dataConnections": [{
+        "ref": "github.raw",
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+              "scope": "user repo read:org"
+            },
+            "executionLimits": {
+            }
+          }
+        }
+      }],
       "javascriptAPIVersion": "3",
       "source": "src",
       "userSettingsDisplay": "GENERATED"
