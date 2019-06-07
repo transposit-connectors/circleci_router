@@ -1,14 +1,16 @@
 (params) => {
-  return [
-    {
-      language: "english",
-      message: "Hello, world"
-    },
-    {
-      language: "spanish",
-      message: "Hola, mundo"
+  // sigh this stupidly returns an array of arrays
+  var users = api.runForAllUsers("this.MapUser");
+  var found;
+  
+  users.map((u) => u[0]).forEach((user) => {
+  
+    if (user.github_username === params.github_username) {
+      found = user.slack_username;
     }
-  ];
+  });
+
+  return found;
 }
 
 /*
