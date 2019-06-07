@@ -58,7 +58,8 @@
             "executionLimits": {
             }
           }
-        }
+        },
+        "title": "Github"
       }, {
         "ref": "slack_identify.raw",
         "requireConsumerSignin": true,
