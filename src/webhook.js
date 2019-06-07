@@ -7,7 +7,7 @@
   
   var body = parsedBody;
   body.channel = params.channel;
-  body.attachments[0].text = "Success: ninayang's workflow (build-deploy) in transposit/transposit (master)\n - tr 3949 "
+  body.attachments[0].text = "Failed: ninayang's workflow (build-deploy) in transposit/transposit (master) \n - Add alarm for notifications manager failures (#1490) (df5f194 by ninayang) "
   
   setImmediate(() => {
     try {
@@ -27,7 +27,7 @@
       
     } catch (err){
       api.log(err.message);
-      // Send the original message
+      // Send the original message if something happened
       api.run("slack.post_chat_message", {$body: body});
     }
   })
