@@ -7,6 +7,9 @@
       }, {
         "name": "transposit/github:v3.*.*",
         "alias": "github"
+      }, {
+        "name": "transposit/slack:v1.*.*",
+        "alias": "slack_identify"
       }],
       "operations": [{
         "id": "hello_world",
