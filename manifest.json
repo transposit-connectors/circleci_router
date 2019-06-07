@@ -59,7 +59,7 @@
         "overrides": {
           "swagger": {
             "oauthConfig": {
-              "scope": "user repo read:org"
+              "scope": "user"
             },
             "executionLimits": {
             }
