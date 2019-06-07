@@ -1,13 +1,12 @@
-({ http_event }) => {
+(params) => {
+  var http_event = params.http_event;
   api.log(http_event);
   
   var parsedBody = JSON.parse(http_event.body);
   api.log(parsedBody);
   
   var body = parsedBody;
-  
-  body.channel = "C2EBUS678"
-  
+  body.channel = params.channel;
   body.attachments[0].text = "Success: ninayang's workflow (build-deploy) in transposit/transposit (master)\n - tr 3949 "
   
   setImmediate(() => {

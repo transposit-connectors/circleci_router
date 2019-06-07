@@ -20,6 +20,12 @@
               "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
             },
             "type": "OBJECT"
+          }, {
+            "name": "channel",
+            "default": {
+              "text": "C2EBUS678"
+            },
+            "type": "STRING"
           }],
           "js": "webhook.js"
         },
