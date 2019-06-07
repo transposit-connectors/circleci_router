@@ -55,7 +55,8 @@
       }, {
         "id": "list_contributors_to_repo",
         "tql": {
-          "tql": "SELECT * FROM github.list_contributors_to_repo\n  WHERE owner='transposit'\n  AND repo='transposit'\n  \n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT * FROM github.list_contributors_to_repo\n  WHERE owner='transposit'\n  AND repo='transposit'\n  \n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */",
+          "cacheExpirySec": 3600
         }
       }],
       "dataConnections": [{

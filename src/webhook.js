@@ -1,5 +1,9 @@
 ({ http_event }) => {
   api.log(http_event);
+  // parse github id
+  // map github id to slack id
+  
+  // 
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
