@@ -59,6 +59,7 @@
         "overrides": {
           "swagger": {
             "oauthConfig": {
+              "scope": "user"
             },
             "executionLimits": {
             }
