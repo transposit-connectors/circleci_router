@@ -103,6 +103,10 @@
         "name": "github_username",
         "type": "STRING",
         "hidden": true
+      }, {
+        "name": "slack_username",
+        "type": "STRING",
+        "hidden": true
       }],
       "userSettingsDisplay": "GENERATED"
     }
