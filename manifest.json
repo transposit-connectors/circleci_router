@@ -99,6 +99,11 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
+      "userSettings": [{
+        "name": "github_username",
+        "type": "STRING",
+        "hidden": true
+      }],
       "userSettingsDisplay": "GENERATED"
     }
   }
