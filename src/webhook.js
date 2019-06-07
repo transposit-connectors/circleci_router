@@ -14,12 +14,15 @@
       var textArr = body.attachments[0].text.split(" ");
       var name = textArr[1];
       var githubUsername = name.substring(0, name.length - 2);
-      var slackId = api.run("this.FindUser", {github_username: githubUsername})[0];
+      var userSettings = api.run("this.FindUser", {github_username: githubUsername})[0];
       
+      var isSuccess = textArr[0] === "Success:";
       
-      textArr[1] = `<@${slackId}>'s'`;
+      if (!isSuccess || userSettings.also_success) {
+        textArr[1] = `<@${slackId}>'s'`;
+      }
+      
       body.attachments[0].text = textArr.join(" ");
-      api.log("???");
       api.run("slack.post_chat_message", {$body: body});
       
     } catch (err){

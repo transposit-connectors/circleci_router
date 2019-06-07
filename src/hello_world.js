@@ -6,7 +6,7 @@
   users.map((u) => u[0]).forEach((user) => {
   
     if (user.github_username === params.github_username) {
-      found = user.slack_username;
+      found = user;
     }
   });
 

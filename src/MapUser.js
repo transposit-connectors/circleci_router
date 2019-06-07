@@ -17,7 +17,8 @@
   }
   
   return {github_username: github,
-         slack_username: slack};
+         slack_username: slack,
+         also_success: user_setting.get("also_success")};
 }
 
 /*
