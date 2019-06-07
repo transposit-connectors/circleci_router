@@ -5,8 +5,30 @@
   api.log(parsedBody);
   
   var body = parsedBody;
-  body.channel = "C2EBUS678";
-  api.run("slack.post_chat_message", {$body: body});
+  
+  body.channel = "C2EBUS678"
+  
+  body.attachments[0].text = "Success: ninayang's workflow (build-deploy) in transposit/transposit (master)\n - tr 3949 "
+  
+  setImmediate(() => {
+    try {
+      var textArr = body.attachments[0].text.split(" ");
+      var name = textArr[1];
+      var githubUsername = name.substring(0, name.length - 2);
+      var slackId = api.run("this.FindUser", {github_username: githubUsername})[0];
+      
+      
+      textArr[1] = `<@${slackId}>'s'`;
+      body.attachments[0].text = textArr.join(" ");
+      api.log("???");
+      api.run("slack.post_chat_message", {$body: body});
+      
+    } catch (err){
+      api.log(err.message);
+      // Send the original message
+      api.run("slack.post_chat_message", {$body: body});
+    }
+  })
   
   
    
