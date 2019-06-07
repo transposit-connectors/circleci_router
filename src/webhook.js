@@ -18,7 +18,7 @@
       var isSuccess = textArr[0] === "Success:";
       
       if (!isSuccess || userSettings.also_success) {
-        textArr[1] = `<@${userSettings.slack_username}>'s'`;
+        textArr[1] = `<@${userSettings.slack_username}>'s`;
       }
       
       body.attachments[0].text = textArr.join(" ");
