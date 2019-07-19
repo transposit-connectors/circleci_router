@@ -1,6 +1,7 @@
 (params) => {
   var http_event = params.http_event;  
   var body = http_event.parsed_body;
+  api.log(body);
   
   body.channel = params.channel;
   body.channel = "CK4K2AK4N";
