@@ -1,4 +1,6 @@
 (params) => {
+  
+  // Stash is a map between github username user object
   var found = stash.get(params.github_username);
   if (!found) {
 
@@ -12,14 +14,15 @@
       found = user;
     }
   });
-
   }
   
   if (found) {
-    api.run(user_setting.get("also_success"), {}, {asUser: "blah"})
-          also_success: user_setting.get("also_success")
+    var also_success = api.run("this.get_also_success", {}, {asUser: found.id})[0];
+    return {also_success: also_success,
+           slack_userame: found.slack.userId}
   }
-  return found;
+  
+  return null;
 }
 
 /*

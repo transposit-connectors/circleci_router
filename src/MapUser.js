@@ -9,7 +9,7 @@
   }
   
   return {github_username: github,
-         slack_username: api.user().slack.userId};
+         user: api.user()};
 }
 
 /*
