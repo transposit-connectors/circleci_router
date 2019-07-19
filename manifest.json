@@ -96,10 +96,6 @@
         "type": "STRING",
         "hidden": true
       }, {
-        "name": "slack_username",
-        "type": "STRING",
-        "hidden": true
-      }, {
         "name": "also_success",
         "description": "@me when my builds succeed too",
         "type": "BOOLEAN"
