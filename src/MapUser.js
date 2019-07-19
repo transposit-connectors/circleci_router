@@ -8,19 +8,8 @@
     }
   }
   
-  api.log(api.user());
-  api.log(api.user())
-  
-  var slack = user_setting.get("slack_username");
-  if (!slack) {
-    if (api.isAuthed("slack_identify")) {
-    var slack = api.run("slack_identify.get_users_identity")[0].user.id;
-    user_setting.put("slack_username", slack);  
-    }
-  }
-  
   return {github_username: github,
-         slack_username: slack,
+         slack_username: api.user().slack.userId,
          also_success: user_setting.get("also_success")};
 }
 
