@@ -1,11 +1,7 @@
 (params) => {
-  var http_event = params.http_event;
-  api.log(http_event);
+  var http_event = params.http_event;  
+  var body = http_event.parsed_body;
   
-  var parsedBody = JSON.parse(http_event.body);
-  api.log(parsedBody);
-  
-  var body = parsedBody;
   body.channel = params.channel;
   body.channel = "CK4K2AK4N";
   
