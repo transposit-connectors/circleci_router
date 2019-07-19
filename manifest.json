@@ -45,9 +45,6 @@
             "required": true
           }],
           "js": "hello_world.js"
-        },
-        "access": {
-          "requireUser": true
         }
       }],
       "dataConnections": [{
