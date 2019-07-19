@@ -9,6 +9,7 @@
   }
   
   api.log(api.user());
+  api.log(api.user())
   
   var slack = user_setting.get("slack_username");
   if (!slack) {

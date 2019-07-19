@@ -9,6 +9,7 @@
   body.channel = params.channel;
   body.channel = "CK4K2AK4N";
   
+  api.log(api.user({type: "slack"}));
   setImmediate(() => {
     try {
       var textArr = body.attachments[0].text.split(" ");
