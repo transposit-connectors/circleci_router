@@ -73,7 +73,6 @@
         "title": "Github"
       }, {
         "ref": "slack_identify.raw",
-        "requireConsumerSignin": true,
         "overrides": {
           "swagger": {
             "oauthConfig": {
