@@ -8,6 +8,8 @@
     }
   }
   
+  api.log(api.user());
+  
   var slack = user_setting.get("slack_username");
   if (!slack) {
     if (api.isAuthed("slack_identify")) {

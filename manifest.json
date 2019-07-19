@@ -52,6 +52,11 @@
         "access": {
           "requireUser": true
         }
+      }, {
+        "id": "untitled",
+        "function": {
+          "js": "untitled.js"
+        }
       }],
       "dataConnections": [{
         "ref": "github.raw",
