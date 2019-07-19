@@ -1,6 +1,7 @@
 (params) => {
   var maybeUser = stash.get(params.github_username);
   if (maybeUser) {
+    api.log("stashed!!");
     return maybeUser;
   }
   
