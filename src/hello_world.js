@@ -1,12 +1,9 @@
 (params) => {
-  var maybeUser = stash.get(params.github_username);
-  if (maybeUser) {
-    return maybeUser;
-  }
-  
+  var found = stash.get(params.github_username);
+  if (!found) {
+
   // sigh this stupidly returns an array of arrays
   var users = api.runForAllUsers("this.MapUser");
-  var found;
   
   users.map((u) => u[0]).forEach((user) => {
     stash.put(user.github_username, user);
@@ -16,6 +13,12 @@
     }
   });
 
+  }
+  
+  if (found) {
+    api.run(user_setting.get("also_success"), {}, {asUser: "blah"})
+          also_success: user_setting.get("also_success")
+  }
   return found;
 }
 

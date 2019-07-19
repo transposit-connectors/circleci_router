@@ -9,8 +9,7 @@
   }
   
   return {github_username: github,
-         slack_username: api.user().slack.userId,
-         also_success: user_setting.get("also_success")};
+         slack_username: api.user().slack.userId};
 }
 
 /*
