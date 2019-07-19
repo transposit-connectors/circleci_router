@@ -1,12 +1,12 @@
 (params) => {
-  var http_event = params.http_event;  
-  var body = http_event.parsed_body;
-  api.log(body);
+  var http_event = params.http_event;
+  var parsedBody = JSON.parse(http_event.body);
   
+  var body = parsedBody;
   body.channel = params.channel;
   body.channel = "CK4K2AK4N";
   
-  // api.log(api.user({type: "slack", workspaceId: "T2615V5UK"}));
+
   setImmediate(() => {
     try {
       var textArr = body.attachments[0].text.split(" ");
