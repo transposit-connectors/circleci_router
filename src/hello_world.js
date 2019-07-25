@@ -10,6 +10,7 @@
   api.log(users);
   
   users.map((u) => u[0]).forEach((user) => {
+    api.log(user);
     stash.put(user.github_username, user);
     
     api.log(stash.get(user.github_username));
