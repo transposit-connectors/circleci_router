@@ -10,11 +10,9 @@
   api.log(users);
   
   users.map((u) => u[0]).forEach((user) => {
-    api.log(user);
-    api.log(user.github_username);
-    stash.put(user.github_username, user);
-    
-    api.log(stash.get(user.github_username));
+    if (user.github_username) {
+      stash.put(user.github_username, user);
+    }
   
     if (user.github_username === params.github_username) {
       found = user;
