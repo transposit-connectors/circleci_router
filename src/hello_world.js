@@ -1,10 +1,13 @@
 (params) => {
   // Stash is a map between github username user object
+  console.log("find user??");
   var found = stash.get(params.github_username);
   if (!found) {
 
   // sigh this stupidly returns an array of arrays
   var users = api.runForAllUsers("this.MapUser");
+  api.log("users");
+  api.log(users);
   
   users.map((u) => u[0]).forEach((user) => {
     stash.put(user.github_username, user);
