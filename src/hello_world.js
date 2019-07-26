@@ -21,6 +21,8 @@
   }
   
   if (found) {
+    api.log("found");
+    api.log(found);
     var also_success = api.run("this.get_also_success", {}, {asUser: found.id})[0];
     return {also_success: also_success,
            slack_userame: found.slack.userId}
