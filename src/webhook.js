@@ -4,7 +4,7 @@
   
   var body = parsedBody;
   body.channel = params.channel;
-  params.channel = "CK4K2AK4N";
+  body.channel = "CK4K2AK4N";
 
   setImmediate(() => {
     try {
