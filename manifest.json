@@ -103,6 +103,6 @@
       "userSettingsDisplay": "GENERATED"
     },
     "description": "We'll @ you in Slack if you broke the build.",
-    "displayName": "Better Circle CI Notifications"
+    "displayName": "CircleCI Router"
   }
 }
