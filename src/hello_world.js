@@ -3,10 +3,8 @@
   var found = stash.get(params.github_username);
   if (!found) {
 
-  // sigh this stupidly returns an array of arrays
+  // This returns an array of arrays
   var users = api.runForAllUsers("this.MapUser");
-  api.log("users");
-  api.log(users);
   
   users.map((u) => u[0]).forEach((user) => {
     if (user.github_username) {
@@ -20,7 +18,6 @@
   }
   
   if (found) {
-    api.log(found);
     var also_success = api.run("this.get_also_success", {}, {asUser: found.id})[0];
     return {also_success: also_success,
            slack_username: found.slack.userId}
