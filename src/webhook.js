@@ -22,14 +22,12 @@
       api.run("slack.post_chat_message", {$body: body});
       
     } catch (err){
-      api.log(err.message);
       // Send the original message if something happened
       api.run("slack.post_chat_message", {$body: body});
     }
   })
   
   
-   
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
