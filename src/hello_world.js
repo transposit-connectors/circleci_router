@@ -1,5 +1,5 @@
 (params) => {
-  // Stash is a map between github username user object
+  // Stash is a map between github username and user object
   var found = stash.get(params.github_username);
   if (!found) {
 
