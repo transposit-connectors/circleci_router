@@ -19,9 +19,6 @@
             "type": "OBJECT"
           }, {
             "name": "channel",
-            "default": {
-              "text": "C2EBUS678"
-            },
             "type": "STRING"
           }],
           "js": "webhook.js"
