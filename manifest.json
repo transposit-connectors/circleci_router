@@ -2,7 +2,7 @@
   "v2": {
     "transposit": {
       "dependencies": [{
-        "name": "transposit/slack:v1.*.*",
+        "name": "transposit/slack:v3.*.*",
         "alias": "slack"
       }, {
         "name": "transposit/github:v3.*.*",
