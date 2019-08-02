@@ -12,7 +12,7 @@ To use it, fork this app and make the following modifications to your copy:
 
 4) Navigate to **Deploy > Production Keys** and add your Slack credential. We'll use this credential to send the Slack message from the Transposit Slack app.
 
-5) Have your teammates login to your application and provide their Github credentials. You can find the settings link under **Users > User Configuration**. Also, provide your own credentials via this link!
+5) Have your teammates login to your application and provide their GitHub credentials. You can find the settings link under **Users > User Configuration**. Also, provide your own credentials via this link!
 
 6) If you'd like, you can restrict sign-in to only members of your Slack workspace in **User Configuration**. Your workspace id is the second to last part of the URL found in Slack's web browser.
 
