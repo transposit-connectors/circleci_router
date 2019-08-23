@@ -99,7 +99,7 @@
       }],
       "userSettingsDisplay": "GENERATED"
     },
-    "description": "We'll @ you in Slack if you broke the build.",
+    "description": "Get an @ mention if you break the build! Replaces the GitHub username in the build status message sent by CircleCI with the user's Slack ID.",
     "displayName": "CircleCI Router"
   }
 }
