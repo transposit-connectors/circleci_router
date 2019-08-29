@@ -1,6 +1,6 @@
 # CircleCI Router
 
-This app will replace the GitHub username in the build status message sent by CircleCI with the user's Slack id, which will @mention them in the channel. To learn more, read [our blog post](https://www.transposit.com/blog/2019.08.06-customizing-circleci-notifications-in-slack/) about how it was build.
+This app will replace the GitHub username in the build status message sent by CircleCI with the user's Slack id, which will @mention them in the channel. To learn more, read [our blog post](https://www.transposit.com/blog/2019.08.06-customizing-circleci-notifications-in-slack/) about how it was built.
 
 To use it, fork this app and make the following modifications to your copy:
 
