@@ -1,102 +1,119 @@
 {
   "v2": {
     "transposit": {
-      "dependencies": [{
-        "name": "transposit/slack:v3.*.*",
-        "alias": "slack"
-      }, {
-        "name": "transposit/github:v3.*.*",
-        "alias": "github"
-      }],
-      "operations": [{
-        "id": "webhook",
-        "function": {
-          "parameters": [{
-            "name": "http_event",
-            "default": {
-              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
-            },
-            "type": "OBJECT"
-          }, {
-            "name": "channel",
-            "type": "STRING"
-          }],
-          "js": "webhook.js"
+      "dependencies": [
+        {
+          "name": "transposit/slack:v3.*.*",
+          "alias": "slack"
         },
-        "access": {
-          "requireApiKey": true,
-          "webhook": true
+        {
+          "name": "transposit/github:v3.*.*",
+          "alias": "github"
         }
-      }, {
-        "id": "MapUser",
-        "function": {
-          "js": "MapUser.js"
-        }
-      }, {
-        "id": "FindUser",
-        "description": "Returns \"Hello, world\" in different languages",
-        "function": {
-          "parameters": [{
-            "name": "github_username",
-            "type": "STRING",
-            "required": true
-          }],
-          "js": "hello_world.js"
-        }
-      }, {
-        "id": "get_also_success",
-        "function": {
-          "js": "untitled.js"
-        }
-      }],
-      "dataConnections": [{
-        "ref": "github.raw",
-        "requireConsumerSignin": true,
-        "overrides": {
-          "swagger": {
-            "oauthConfig": {
-              "scope": "user"
-            },
-            "executionLimits": {
-            }
+      ],
+      "operations": [
+        {
+          "id": "webhook",
+          "function": {
+            "parameters": [
+              {
+                "name": "http_event",
+                "default": {
+                  "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
+                },
+                "type": "OBJECT"
+              },
+              {
+                "name": "channel",
+                "type": "STRING"
+              }
+            ],
+            "js": "webhook.js"
+          },
+          "access": {
+            "requireApiKey": true,
+            "webhook": true
           }
         },
-        "title": "Github"
-      }, {
-        "ref": "slack_identify.raw",
-        "overrides": {
-          "swagger": {
-            "oauthConfig": {
-              "scope": "identity.basic"
-            },
-            "executionLimits": {
-            }
+        {
+          "id": "MapUser",
+          "function": {
+            "js": "MapUser.js"
           }
         },
-        "title": "Slack"
-      }, {
-        "ref": "slack.raw",
-        "overrides": {
-          "swagger": {
-            "oauthConfig": {
-              "scope": "channels:write"
-            },
-            "executionLimits": {
+        {
+          "id": "FindUser",
+          "description": "Returns \"Hello, world\" in different languages",
+          "function": {
+            "parameters": [
+              {
+                "name": "github_username",
+                "type": "STRING",
+                "required": true
+              }
+            ],
+            "js": "hello_world.js"
+          }
+        },
+        {
+          "id": "get_also_success",
+          "function": {
+            "js": "untitled.js"
+          }
+        }
+      ],
+      "dataConnections": [
+        {
+          "ref": "github.raw",
+          "requireConsumerSignin": true,
+          "overrides": {
+            "swagger": {
+              "oauthConfig": {
+                "scope": "user"
+              },
+              "executionLimits": {}
+            }
+          },
+          "title": "Github"
+        },
+        {
+          "ref": "slack_identify.raw",
+          "overrides": {
+            "swagger": {
+              "oauthConfig": {
+                "scope": "identity.basic"
+              },
+              "executionLimits": {}
+            }
+          },
+          "title": "Slack"
+        },
+        {
+          "ref": "slack.raw",
+          "overrides": {
+            "swagger": {
+              "oauthConfig": {
+                "scope": "channels:write"
+              },
+              "executionLimits": {}
             }
           }
         }
-      }],
+      ],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettings": [{
-        "name": "github_username",
-        "type": "STRING",
-        "hidden": true
-      }, {
-        "name": "also_success",
-        "description": "@me when my builds succeed too",
-        "type": "BOOLEAN"
-      }],
+      "userSettings": [
+        {
+          "name": "github_username",
+          "type": "STRING",
+          "hidden": true
+        },
+        {
+          "name": "also_success",
+          "description": "@me when my builds succeed too",
+          "type": "BOOLEAN"
+        }
+      ],
       "userSettingsDisplay": "GENERATED"
     },
     "description": "Get an @ mention if you break the build! Replaces the GitHub username in the build status message sent by CircleCI with the user's Slack ID.",
