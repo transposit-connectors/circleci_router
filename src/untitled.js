@@ -1,6 +1,6 @@
 (params) => {
   return user_setting.get("also_success");
-}
+};
 
 /*
  * For sample code and reference material, visit
